@@ -6,6 +6,7 @@
 package org.friascorp.plaza.store;
 
 import org.friascorp.plaza.store.views.Frame_login;
+import org.friascorp.plaza.store.views.Frame_work;
 
 /**
  *
@@ -15,7 +16,8 @@ public class PLAZASTORE {
 
     public static void main(String[] args) {
         
-        new Frame_login().setVisible(true);
+        //new Frame_login().setVisible(true);
+        new Frame_work().setVisible(true);
         
     }
 }
