@@ -16,8 +16,8 @@ public class PLAZASTORE {
 
     public static void main(String[] args) {
         
-        //new Frame_login().setVisible(true);
-        new Frame_work().setVisible(true);
+        new Frame_login().setVisible(true);
+        //new Frame_work().setVisible(true);
         
     }
 }

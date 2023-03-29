@@ -13,6 +13,8 @@ import java.awt.event.MouseListener;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import org.friascorp.plaza.store.otras.Loaderimg_logo;
+import org.friascorp.plaza.store.otras.Security_tools;
 import org.friascorp.plaza.store.views.Frame_login;
 import org.friascorp.plaza.store.views.Frame_work;
 
@@ -32,7 +34,7 @@ public class Control_framelogin implements ActionListener,MouseListener,KeyListe
         //this.framelogin.setIconImage(new ImageIcon(getClass().getResource("/com/ISoftware/icons/logo (2).png")).getImage());
         this.framelogin.setTitle("(Plaza Store) Frias-Corporation S.A.S");
         
-      
+      Loaderimg_logo.loadImages(this.framelogin.lg_labellogo);
         
        this.framelogin.lgp_btninicioseccion.addActionListener(this);
        this.framelogin.lgp_btnregistrarse.addActionListener(this);
@@ -49,6 +51,7 @@ public class Control_framelogin implements ActionListener,MouseListener,KeyListe
        this.framelogin.lgp_btninicioseccion.addKeyListener(this);
        this.framelogin.lgp_btnregistrarse.addKeyListener(this);
         
+       
     }
     
     
@@ -83,7 +86,9 @@ public class Control_framelogin implements ActionListener,MouseListener,KeyListe
 
     @Override
     public void mouseEntered(MouseEvent e) {
-    
+        if(e.getSource() == framelogin.lgp_btninicioseccion){
+            Security_tools.validarcapo(framelogin.lgp_txusuario);
+        }
     }
 
     @Override
